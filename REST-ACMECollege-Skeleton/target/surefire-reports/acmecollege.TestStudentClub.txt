@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: acmecollege.TestStudentClub
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.06 s <<< FAILURE! - in acmecollege.TestStudentClub
+acmecollege.TestStudentClub.test01_all_student_clubs_with_adminrole  Time elapsed: 0.019 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: is <200>
+     but: was <404>
+	at acmecollege.TestStudentClub.test01_all_student_clubs_with_adminrole(TestCRUDStudentClub.java:89)
+
+acmecollege.TestStudentClub.test02_all_student_clubs_with_userrole  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: is <200>
+     but: was <404>
+	at acmecollege.TestStudentClub.test02_all_student_clubs_with_userrole(TestCRUDStudentClub.java:100)
+
+acmecollege.TestStudentClub.test03_add_student_club_with_userrole  Time elapsed: 0.018 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: is <403>
+     but: was <404>
+	at acmecollege.TestStudentClub.test03_add_student_club_with_userrole(TestCRUDStudentClub.java:112)
+

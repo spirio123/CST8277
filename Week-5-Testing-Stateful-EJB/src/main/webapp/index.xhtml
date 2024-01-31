@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:jsf="http://xmlns.jcp.org/jsf"
+  xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+  xmlns:h="http://xmlns.jcp.org/jsf/html"
+  xmlns:f="http://xmlns.jcp.org/jsf/core"
+  xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+  >
+
+  <h:head>
+    <!-- title of tab/window in browser -->
+    <title>Testing Stateful EJB</title>
+    <!-- modern Frontend artifacts such as CSS, JavaScript, etc. -->
+    <!-- misc table styles -->
+    <style>
+        table {
+          border: solid 1px #DDEEEE;
+          border-collapse: collapse;
+          border-spacing: 0;
+          table-layout: auto;
+          width: 95%;
+        }
+        table td {
+          border: solid 1px #DDEEEE;
+        }
+        table th {
+          border: solid 1px black;
+          background-color: #d8d8d8;
+        }
+        table tr:nth-child(even) {
+          background: #f2f2f2;
+        }
+        .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+          background-color: #f0f0e0;
+        }
+        caption {
+          white-space: nowrap;
+          caption-side: bottom;
+        }
+    </style>
+  </h:head>
+  <h:body>
+    <h2>Testing Stateful EJB</h2>
+    <br />
+    <h:form>
+       
+       <br/>
+       <h:inputText value="#{testAppController.userInput}" />
+       <br/>
+
+       <h:commandButton value="Add User Input" action="#{testAppController.addUserInput()}" />
+       <h:commandButton value="Remove User Input" action="#{testAppController.removeUserInput()}" />
+       <h:commandButton value="Remove All" action="#{testAppController.removeAll()}" />
+       
+       <br/>
+       
+       <h:dataTable value="#{testAppController.values}" var="vals"
+         styleClass="table table-hover">
+         <h:column>
+           <h:outputText value="#{vals}"/>
+         </h:column>
+       </h:dataTable>
+       
+       <br/>
+
+       <h:outputText value="Size = " />
+       <h:outputText value="#{testAppController.getListSize()}" />
+       
+    </h:form>
+  </h:body>
+</html>

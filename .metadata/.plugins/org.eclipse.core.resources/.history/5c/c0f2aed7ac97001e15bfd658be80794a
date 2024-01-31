@@ -1,0 +1,5 @@
+package acmecollege.util;
+
+public interface MyQueriesConstants {
+
+}

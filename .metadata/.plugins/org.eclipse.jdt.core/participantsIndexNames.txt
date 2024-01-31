@@ -1,0 +1,9 @@
+INDEX VERSION 1.134
+C:\Eclipse_Workspaces\CST8277_Eclipse_Workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\8534295.index
+\Week-5-Servlet-EJB-Example\src\main\java
+C:\Eclipse_Workspaces\CST8277_Eclipse_Workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2520906586.index
+\Servlet-EJB-Example\src\main\java
+C:\Eclipse_Workspaces\CST8277_Eclipse_Workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3097538939.index
+\week_5_servlet_ejb\src\main\java
+C:\Eclipse_Workspaces\CST8277_Eclipse_Workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\112289862.index
+\JSP-Regional-Inventory\src\main\java

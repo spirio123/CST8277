@@ -1,0 +1,13 @@
+#GlassFish 3
+#Mon Dec 11 03:15:48 EST 2023
+org.eclipse.jst.jee.server\:Ollie-Savill-Assignment-2-DataBank-JSF-JPA-Professor=C\:\\Users\\savil\\Payara_Server\\glassfish\\domains\\domain1\\eclipseApps\\Ollie-Savill-Assignment-2-DataBank-JSF-JPA-Professor
+org.eclipse.jst.jee.server\:Servlet-EJB-Example=C\:\\Users\\savil\\Payara_Server\\glassfish\\domains\\domain1\\eclipseApps\\Servlet-EJB-Example
+org.eclipse.jst.jee.server\:Week-5-JSF-Templates=C\:\\Users\\savil\\Payara_Server\\glassfish\\domains\\domain1\\eclipseApps\\Week-5-JSF-Templates
+org.eclipse.jst.jee.server\:Testing-Stateful-EJB=C\:\\Users\\savil\\Payara_Server\\glassfish\\domains\\domain1\\eclipseApps\\Testing-Stateful-EJB
+org.eclipse.jst.jee.server\:REST-Demo-Security-Updated=C\:\\Users\\savil\\Payara_Server\\glassfish\\domains\\domain1\\eclipseApps\\REST-Demo-Security-Updated
+org.eclipse.jst.jee.server\:REST-ACMECollege-Skeleton=C\:\\Users\\savil\\Payara_Server\\glassfish\\domains\\domain1\\eclipseApps\\REST-ACMECollege-Skeleton
+org.eclipse.jst.jee.server\:JSF-Templates=C\:\\Users\\savil\\Payara_Server\\glassfish\\domains\\domain1\\eclipseApps\\JSF-Templates
+org.eclipse.jst.jee.server\:Simple-Servlet-Example=C\:\\Users\\savil\\Payara_Server\\glassfish\\domains\\domain1\\eclipseApps\\Simple-Servlet-Example
+org.eclipse.jst.jee.server\:Week-5-JSF-Regional-Inventory-Completed=C\:\\Users\\savil\\Payara_Server\\glassfish\\domains\\domain1\\eclipseApps\\Week-5-JSF-Regional-Inventory-Completed
+org.eclipse.jst.jee.server\:DataBank-JSF-JPA-Professor-Skeleton=C\:\\Users\\savil\\Payara_Server\\glassfish\\domains\\domain1\\eclipseApps\\DataBank-JSF-JPA-Professor-Skeleton
+org.eclipse.jst.jee.server\:DataBank-JSF-JDBC-Professor-Skeleton=C\:\\Users\\savil\\Payara_Server\\glassfish\\domains\\domain1\\eclipseApps\\DataBank-JSF-JDBC-Professor-Skeleton

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:jsf="http://xmlns.jcp.org/jsf"
+  xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+  xmlns:h="http://xmlns.jcp.org/jsf/html"
+  xmlns:f="http://xmlns.jcp.org/jsf/core"
+  xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+  >
+  <!-- view that lists regional inventory levels -->
+
+  <f:metadata>
+    <!-- use our knowlege of JSF phases to ask Controller to load/refresh its model list -->
+    <f:viewAction action="#{inventoryController.loadInventory()}" phase="UPDATE_MODEL_VALUES" /> 
+  </f:metadata>
+
+  <h:head>
+    <!-- title of tab/window in browser -->
+    <!-- Use modern Frontend artifacts such as JQuery, Font Awesome, Bootstrap etc. -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous" />
+    <link href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" type="text/css" rel="stylesheet" crossorigin="anonymous" />
+    <link href="https://unpkg.com/bootstrap@4.5.2/dist/css/bootstrap.min.css" type="text/css" rel="stylesheet"  crossorigin="anonymous" />
+    <script src="https://unpkg.com/bootstrap@4.5.2/dist/js/bootstrap.min.js" crossorigin="anonymous" />
+    
+    <!-- misc custom styles, manly to override table hover -->
+    <style>
+      table {
+        border-spacing: 0;
+        table-layout: auto;
+        margin: 0 auto;
+      }
+      .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+        background-color: #f0f0e0;
+      }
+    </style>
+  </h:head>
+  <h:body>
+    <div class="container-fluid">
+      <!-- top navigation bar -->
+      <nav id="topbar" class="navbar navbar-light bg-light">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#"><i class="fas fa-store fa-lg">&#xa0;<h:outputText value="#{uiconsts['viewTitle']}"/></i></a>
+        </div>
+      </nav>
+
+      <!-- footer
+         Bootstrap CSS is clever - even though this element is defined second under the 'container-fluid',
+         it is fixed to the bottom of the page
+       -->
+      <footer class="footer fixed-bottom bg-light text-center" title="footer">
+        <h:outputText class="text-muted credit" value="Brought to you by #{uiconsts['footer.studentname']} (21S CST 8277 - #{uiconsts['footer.labsection']} - Student #: #{uiconsts['footer.studentnumber']})"/>
+      </footer>
+      
+      <!-- main content -->
+      <div id="main" role="main" class="main col-12">
+        <h:form>
+          <h:selectOneMenu value="#{inventoryController.region}" onchange="submit()"
+            valueChangeListener="#{inventoryController.valueChangeMethod}">
+            <f:selectItems value="#{inventoryController.regions}" />
+          </h:selectOneMenu>
+        </h:form>
+        <br />
+        <br />
+    
+        <h:form>
+          <!-- Javascript onclick-handler cannot use 'map-style' uiconsts['something'], use 'properties-style'  -->
+          <h:commandButton value="#{uiconsts['addButtonLabel']}" onclick = "alert('#{uiconsts.nyi}');" />
+          <p/>
+          <h:dataTable value="#{inventoryController.inventory}" var="inv"
+            styleClass="table table-striped table-bordered table-hover"
+            headerClass="thead-light"
+            captionClass="text-center">
+            <h:column>
+              <f:facet name="header">#{uiconsts['columnLabel_Id']}</f:facet>
+              <h:outputText value="#{inv.id}"/>
+            </h:column>
+            <h:column>
+              <f:facet name="header">#{uiconsts['columnLabel_Region']}</f:facet>
+              <h:outputText value="#{inv.region}"/>
+            </h:column>
+            <h:column>
+              <f:facet name="header">#{uiconsts['columnLabel_RetailerName']}</f:facet>
+              <h:outputText value="#{inv.retailerName}"/>
+            </h:column>
+            <h:column>
+              <f:facet name="header">#{uiconsts['columnLabel_InventoryLevel']}</f:facet>
+              <h:outputText value="#{inv.inventoryLevel}"/>
+            </h:column>
+	        <!-- Action column -->
+	        <h:column>
+	          <f:facet name="header">#{uiconsts['columnLabel_Action']}</f:facet>
+	          <h:commandLink onclick = "alert('#{uiconsts.nyi}');" >
+                <i class="btn btn-primary btn-xs fas fa-edit">&#xa0;<h:outputText value="#{uiconsts['editButtonLabel']}" /></i>
+              </h:commandLink>
+              &#160;
+              <h:commandLink 
+                onclick="if (!confirm('#{uiconsts.rus}')) return false"
+                >
+                <i class="btn btn-danger btn-xs far fa-trash-alt">&#xa0;<h:outputText value="#{uiconsts['deleteButtonLabel']}" /></i>
+              </h:commandLink>
+	        </h:column>
+            <f:facet name="caption">#{uiconsts['listCaption']}</f:facet>
+          </h:dataTable>
+        </h:form>
+      </div>
+    </div>
+  </h:body>
+</html>

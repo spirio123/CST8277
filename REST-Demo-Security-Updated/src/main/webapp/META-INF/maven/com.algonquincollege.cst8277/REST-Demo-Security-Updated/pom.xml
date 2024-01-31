@@ -1,0 +1,123 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+    http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.algonquincollege.cst8277</groupId>
+    <artifactId>REST-Demo-Security-Updated</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>REST-Demo-Security-Updated</name>
+    <packaging>war</packaging>
+    <description>Mavenized Jakarta EE REST with Security (JDK17) Updated</description>
+
+    <!-- why is everything a property? Because hard-coded values become part 
+        of Maven's immutable Model object and then their contents can't be changed. 
+        However, if the value is set in a user-defined property BEFORE the Model 
+        object is created, then it is possible to do: mvn clean compile -Dfoo.bar.version=1.2.3 
+        in order to (say for example) test out a newer version of some dependency 
+        without having to change the pom.xml. -->
+    <properties>
+        <!-- maven properties -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
+        <maven.war.plugin.version>3.3.2</maven.war.plugin.version>
+        <maven.compiler.release>17</maven.compiler.release>
+        <maven.compiler.target>17</maven.compiler.target>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
+
+        <!-- code properties -->
+        <jackson.version>2.13.2</jackson.version>
+        <jakartaee.api.version>8.0.0</jakartaee.api.version>
+        <jakarta.security.enterprise.version>1.0.1</jakarta.security.enterprise.version>
+        <connectorj.version>8.0.31</connectorj.version>
+        <hibernate.version>5.6.3.Final</hibernate.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.fasterxml.jackson</groupId>
+                <artifactId>jackson-bom</artifactId>
+                <version>${jackson.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
+            <version>${jakartaee.api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.soteria</groupId>
+            <artifactId>jakarta.security.enterprise</artifactId>
+            <version>${jakarta.security.enterprise.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.module</groupId>
+            <artifactId>jackson-module-jaxb-annotations</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.jaxrs</groupId>
+            <artifactId>jackson-jaxrs-json-provider</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${connectorj.version}</version>
+        </dependency>
+        <!-- Hiberate dependency -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>${hibernate.version}</version>
+            <!-- Note: because we are using the offical Jakarta EE 8 dependencies above,
+                must instruct hibernate-entitymanagerto skip its own dependencies on various javax
+                packages as there are some minor version mismatches
+            -->
+            <exclusions>
+                <exclusion>
+                    <groupId>javax.persistence</groupId>
+                    <artifactId>javax.persistence-api</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.plugin.version}</version>
+                <configuration>
+                    <release>${maven.compiler.release}</release>
+                    <target>${maven.compiler.target}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>${maven.war.plugin.version}</version>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

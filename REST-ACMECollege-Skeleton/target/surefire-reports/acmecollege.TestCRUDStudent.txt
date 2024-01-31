@@ -1,0 +1,51 @@
+-------------------------------------------------------------------------------
+Test set: acmecollege.TestCRUDStudent
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 5, Errors: 3, Skipped: 0, Time elapsed: 0.112 s <<< FAILURE! - in acmecollege.TestCRUDStudent
+acmecollege.TestCRUDStudent.test01_get_all_students_with_adminrole  Time elapsed: 0.015 s  <<< ERROR!
+org.glassfish.jersey.message.internal.MessageBodyProviderNotFoundException: MessageBodyReader not found for media type=text/html, type=interface java.util.List, genericType=java.util.List<acmecollege.entity.Student>.
+	at acmecollege.TestCRUDStudent.test01_get_all_students_with_adminrole(TestCRUDStudent.java:103)
+
+acmecollege.TestCRUDStudent.test02_get_all_students_with_userrole  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: is <403>
+     but: was <404>
+	at acmecollege.TestCRUDStudent.test02_get_all_students_with_userrole(TestCRUDStudent.java:122)
+
+acmecollege.TestCRUDStudent.test03_get_student_by_id_with_adminrole  Time elapsed: 0.015 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: is <200>
+     but: was <404>
+	at acmecollege.TestCRUDStudent.test03_get_student_by_id_with_adminrole(TestCRUDStudent.java:140)
+
+acmecollege.TestCRUDStudent.test04_get_student_by_id_with_userrole  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: is <200>
+     but: was <404>
+	at acmecollege.TestCRUDStudent.test04_get_student_by_id_with_userrole(TestCRUDStudent.java:160)
+
+acmecollege.TestCRUDStudent.test05_add_student_with_adminrole  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: is <200>
+     but: was <404>
+	at acmecollege.TestCRUDStudent.test05_add_student_with_adminrole(TestCRUDStudent.java:180)
+
+acmecollege.TestCRUDStudent.test06_add_student_with_userrole  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: is <403>
+     but: was <404>
+	at acmecollege.TestCRUDStudent.test06_add_student_with_userrole(TestCRUDStudent.java:200)
+
+acmecollege.TestCRUDStudent.test07_Update_student_with_adminrole  Time elapsed: 0.011 s  <<< ERROR!
+org.glassfish.jersey.message.internal.MessageBodyProviderNotFoundException: MessageBodyReader not found for media type=text/html, type=interface java.util.List, genericType=java.util.List<acmecollege.entity.Student>.
+	at acmecollege.TestCRUDStudent.test07_Update_student_with_adminrole(TestCRUDStudent.java:212)
+
+acmecollege.TestCRUDStudent.test08_delete_student_by_id_with_adminrole  Time elapsed: 0.01 s  <<< ERROR!
+org.glassfish.jersey.message.internal.MessageBodyProviderNotFoundException: MessageBodyReader not found for media type=text/html, type=interface java.util.List, genericType=java.util.List<acmecollege.entity.Student>.
+	at acmecollege.TestCRUDStudent.test08_delete_student_by_id_with_adminrole(TestCRUDStudent.java:245)
+

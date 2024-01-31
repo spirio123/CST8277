@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Eclipse_Workspaces\CST8277_Eclipse_Workspace\REST-ACMECollege-Skeleton"/>
+			<item value="C:\Eclipse_Workspaces\CST8277_Eclipse_Workspace\REST-Demo-Security-Updated"/>
+			<item value="C:\Eclipse_Workspaces\CST8277_Eclipse_Workspace\ACMECollege-JPA-Mapping-JUnit-Skeleton"/>
+			<item value="C:\Eclipse_Workspaces\CST8277_Eclipse_Workspace\EmbeddedTomcat"/>
+			<item value="C:\Eclipse_Workspaces\CST8277_Eclipse_Workspace\Lab 3 - JMC and JFR"/>
+			<item value="C:\Eclipse_Workspaces\CST8277_Eclipse_Workspace\lab3"/>
+			<item value="C:\Eclipse_Workspaces\CST8277_Eclipse_Workspace\DataBank-JSF-JPA-Professor-Skeleton"/>
+			<item value="C:\Eclipse_Workspaces\CST8277_Eclipse_Workspace\lab_3"/>
+			<item value="C:\Eclipse_Workspaces\CST8277_Eclipse_Workspace"/>
+			<item value="C:\Eclipse_Workspaces\CST8277_Eclipse_Workspace\JDBC-Review"/>
+			<item value="C:\Eclipse_Workspaces\CST8277_Eclipse_Workspace\Lab 2 Exercise"/>
+			<item value="C:\Eclipse_Workspaces\CST8277_Eclipse_Workspace\JDBC-CMD-Professor-Skeleton"/>
+			<item value="C:\Users\savil\Downloads\Lab02-Skeleton"/>
+			<item value="C:\Eclipse_Workspaces\CST8277_Eclipse_Workspace\JSF-Regional-Inventory-Completed"/>
+			<item value="C:\Eclipse_Workspaces\CST8277_Eclipse_Workspace\Example-HibernateSE"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Eclipse_Workspaces\CST8277_Eclipse_Workspace"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+		</list>
+		<list key="groupId">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.dialogs.MavenRepositorySearchDialog">
+		<item key="width" value="480"/>
+		<item key="height" value="667"/>
+		<item key="x" value="720"/>
+		<item key="y" value="71"/>
+	</section>
+</section>

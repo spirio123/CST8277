@@ -1,0 +1,32 @@
+-------------------------------------------------------------------------------
+Test set: acmecollege.TestCRUDCourse
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 7, Errors: 0, Skipped: 0, Time elapsed: 0.137 s <<< FAILURE! - in acmecollege.TestCRUDCourse
+acmecollege.TestCRUDCourse.test01_getAllCourses_with_adminrole  Time elapsed: 0.022 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <404> but was: <200>
+	at acmecollege.TestCRUDCourse.test01_getAllCourses_with_adminrole(TestCRUDCourse.java:76)
+
+acmecollege.TestCRUDCourse.test02_getAllCourses_with_userrole  Time elapsed: 0.015 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <404> but was: <403>
+	at acmecollege.TestCRUDCourse.test02_getAllCourses_with_userrole(TestCRUDCourse.java:88)
+
+acmecollege.TestCRUDCourse.test03_getCourseById_with_adminrole  Time elapsed: 0.016 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <404> but was: <200>
+	at acmecollege.TestCRUDCourse.test03_getCourseById_with_adminrole(TestCRUDCourse.java:99)
+
+acmecollege.TestCRUDCourse.test04_getCourseById_with_userrole  Time elapsed: 0.016 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <404> but was: <403>
+	at acmecollege.TestCRUDCourse.test04_getCourseById_with_userrole(TestCRUDCourse.java:110)
+
+acmecollege.TestCRUDCourse.test05_postCourse_with_adminrole  Time elapsed: 0.022 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <404> but was: <200>
+	at acmecollege.TestCRUDCourse.test05_postCourse_with_adminrole(TestCRUDCourse.java:121)
+
+acmecollege.TestCRUDCourse.test06_postCourse_with_userrole  Time elapsed: 0.015 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <404> but was: <403>
+	at acmecollege.TestCRUDCourse.test06_postCourse_with_userrole(TestCRUDCourse.java:134)
+
+acmecollege.TestCRUDCourse.test07_deleteCourse_with_adminrole  Time elapsed: 0.013 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <403> but was: <200>
+	at acmecollege.TestCRUDCourse.test07_deleteCourse_with_adminrole(TestCRUDCourse.java:146)
+

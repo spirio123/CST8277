@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:jsf="http://xmlns.jcp.org/jsf"
+  xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+  xmlns:h="http://xmlns.jcp.org/jsf/html"
+  xmlns:f="http://xmlns.jcp.org/jsf/core"
+  xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+  >
+  <!-- View that adds new professor -->
+
+  <h:head>
+    <!-- Title of tab/window in browser -->
+    <title>#{uiconsts['addButtonLabel']}</title>
+  </h:head>
+  <h:body>
+    <h2>#{uiconsts['addButtonLabel']}</h2>
+    <br/>
+    
+    <h:form>
+    <h:panelGrid columns="3">
+	    
+	    <h:outputText value="#{uiconsts['columnLabel_LastName']}" />
+	    <h:inputText value="#{newProfessor.lastName}"/>
+	
+		<br />
+		
+	    <h:outputText value="#{uiconsts['columnLabel_FirstName']}" />
+	    <h:inputText value="#{newProfessor.firstName}"/>
+	    
+	    <br />
+	    
+	    <h:outputText value="#{uiconsts['columnLabel_Email']}" />
+	    <h:inputText value="#{newProfessor.email}"/>
+	    
+	    <br />
+	    
+	    <h:outputText value="#{uiconsts['columnLabel_PhoneNumber']}" />
+	    <h:inputText value="#{newProfessor.phoneNumber}"/>
+	    
+	    <br />
+	     
+	    <h:outputText value="#{uiconsts['columnLabel_Degree']}" />
+			<h:selectOneMenu value="#{newProfessor.degree}">
+			    <f:selectItems value="#{professorController.degrees}" var="degree" itemValue="#{degree}" itemLabel="#{degree}"/>
+			</h:selectOneMenu>
+
+	    <br />
+	    
+	    <h:outputText value="#{uiconsts['columnLabel_Major']}" />
+			<h:selectOneMenu value="#{newProfessor.major}">
+			    <f:selectItems value="#{professorController.majors}" var="major" itemValue="#{major}" itemLabel="#{major}" />
+			</h:selectOneMenu>
+
+	    
+	    <br />
+	    
+	    <h:commandButton value="#{uiconsts['addButtonLabel']}"
+	    	action="#{professorController.submitProfessor(newProfessor)}" />
+	    <h:outputLink value="list-professors.xhtml">Back</h:outputLink>
+    </h:panelGrid>
+    </h:form>
+  </h:body>
+</html>

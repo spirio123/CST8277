@@ -1,0 +1,71 @@
+openapi: 3.0.0
+info:
+  description: "This is a REST Security Demo (Updated)"
+  version: "1.0.0"
+  title: "REST Demo"
+  contact:
+    name: CST 8277
+    email: normanm@algonquincollege.com
+    url: https://brightspace.algonquincollege.com/d2l/home/279461
+
+servers:
+  - url: 'http://localhost:{port}/{contextRoot}/{basePath}'
+    variables:
+      contextRoot:
+         default: 'REST-Demo-Security-Updated'
+      basePath:
+        default: 'api/v1'
+      port:
+        default: '8080'
+ 
+security:
+  - basicAuth: []
+  
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+      
+  schemas:
+      User:
+          description: "Week 12 - REST Security Demo (Updated) User entity"
+          type: object
+          properties: {
+              id: {type: integer, description: "id of User", example: 5},
+              username: {type: string, description: "Name of User", example: John}
+          }
+      UsersList:
+          description: "list of users"
+          type: array
+          items: {
+              $ref: "#/components/schemas/User"
+          }        
+ 
+paths:
+    /user:
+        get:
+            responses: {
+                "200": {
+                    description: "Ok (Successful operation)",
+                    content: {
+                        application/json: {
+                            schema: {
+                                $ref: "#/components/schemas/UsersList"
+                            }
+                        }
+                    }
+                }
+            }
+
+    /user/{id}:
+        get:
+          parameters:
+            - in: path
+              name: id
+              schema:
+                type: integer
+              required: true
+          responses:
+            200:      
+              description: OK

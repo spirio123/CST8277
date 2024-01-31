@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+  xmlns:h="http://xmlns.jcp.org/jsf/html"
+  >
+  <h:body>
+    <ui:composition template="/template/common/commonLayout.xhtml">
+      <!-- replace 'content' in commonLayout with following HTML snippet -->
+      <ui:define name="content"> <!--  overriding the content that is present in the common one -->
+        <h2>This is some custom content:</h2> <br/>
+        <p><h:outputText value="#{exampleController.cuteMessage}" /></p>
+      </ui:define>
+      <ui:define name="footer">
+        <h4>This is a custom footer</h4>
+      </ui:define>
+    </ui:composition>
+  </h:body>
+</html>

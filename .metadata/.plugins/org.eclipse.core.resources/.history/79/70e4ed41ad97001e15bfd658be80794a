@@ -1,0 +1,18 @@
+package acmecollege.util;
+
+public interface MyQueriesConstants {
+	public static final String FIND_ALL = "ClubMembership.findAll";
+    public static final String FIND_BY_ID = "ClubMembership.findbyId";
+    public static final String ALL_COURSES_QUERY_NAME = "Course.ALL_COURSES_QUERY";
+    public static final String COURSE_REGISTRATION_QUERY_NAME = "CourseRegistration.findAll";
+    public static final String ALL_CARDS_QUERY_NAME = "MembershipCard.findAll";
+	public static final String ID_CARD_QUERY_NAME = "MembershipCard.findById";
+	public static final String ALL_PROFESSORS_QUERY_NAME = "Professor.findAll";
+	public static final String FIND_USER_ROLE = "SecurityRole.findAll";
+    public static final String FIND_STUDENT_WITH_ROLE = "SecurityUser.find";
+    public static final String SECURITY_USER_BY_NAME_QUERY = "SecurityUser.userByName";
+    public static final String IS_DUPLICATE_SECURITY_USER = "SecurityUser.isDuplicate";
+    public static final String SECURITY_USER_BY_STUDENT_ID_QUERY = "SecurityUser.byStudentId";
+    public static final String ALL_STUDENTS_QUERY_NAME = "Student.findAll";
+	public static final String QUERY_STUDENT_BY_ID = "Student.findAllByID";
+}

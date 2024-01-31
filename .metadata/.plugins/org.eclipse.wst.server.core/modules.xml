@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<modules>
+  <module moduleId="org.eclipse.jst.jee.server:REST-ACMECollege-Skeleton" serverId="Payara Server 5 (5.2022.5) [domain1]"/>
+  <module moduleId="org.eclipse.jst.jee.server:DataBank-JSF-JDBC-Professor-Skeleton" serverId="Payara Server 5 (5.2022.5) [domain1]"/>
+</modules>

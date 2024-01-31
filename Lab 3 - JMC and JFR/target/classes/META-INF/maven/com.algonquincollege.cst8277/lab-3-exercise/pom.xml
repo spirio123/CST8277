@@ -1,0 +1,44 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.algonquincollege.cst8277</groupId>
+    <artifactId>lab-3-exercise</artifactId>
+    <version>0.0.1-EXPERIMENTAL</version>
+    <packaging>jar</packaging>
+    <name>Lab 3 - JMC and JFR</name>
+    <description>Week 09 Lab Exercise 3</description>
+
+    <!-- why is everything a property? Because hard-coded values become part of
+        Maven's immutable Model object and then their contents can't be changed.
+        However, if the value is set in a user-defined property BEFORE the Model
+        object is created, then it is possible to do: mvn clean compile -Dfoo.bar.version=1.2.3
+        in order to (say for example) test out a newer version of some dependency
+        without having to change the pom.xml.
+    -->
+    
+    <properties>
+        <!-- maven properties -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
+        <maven.compiler.release>17</maven.compiler.release>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.plugin.version}</version>
+                <configuration>
+                    <release>${maven.compiler.release}</release>
+                    <target>${maven.compiler.target}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    
+</project>

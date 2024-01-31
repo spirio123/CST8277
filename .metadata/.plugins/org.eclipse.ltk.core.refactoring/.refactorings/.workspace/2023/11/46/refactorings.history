@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Ollie-Savill-Assignment-3-ACMECollege-JPA-Mapping-JUnit&apos; to &apos;ACMECollege-JPA-Mapping-JUnit&apos;" description="Rename resource &apos;Ollie-Savill-Assignment-3-ACMECollege-JPA-Mapping-JUnit&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/Ollie-Savill-Assignment-3-ACMECollege-JPA-Mapping-JUnit" name="ACMECollege-JPA-Mapping-JUnit" stamp="1700080893242" updateReferences="true"/>
+</session>

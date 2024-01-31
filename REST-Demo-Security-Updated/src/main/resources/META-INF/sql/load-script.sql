@@ -1,0 +1,10 @@
+insert into security_role values(1, 'ADMIN_ROLE');
+insert into security_role values(2, 'USER_ROLE');
+INSERT INTO security_user(id, user_name, password_hash, user_id) values (1, 'admin', '12345', NULL);
+INSERT INTO users_have_roles values(1,1);
+INSERT INTO user_table values (5, 'mike');
+INSERT INTO user_table values (6, 'teddy');
+INSERT INTO security_user(id, user_name, password_hash, user_id) values (2, 'mike', 'Password!', 5);
+INSERT INTO security_user(id, user_name, password_hash, user_id) values (3, 'teddy', 'yap!', 6);
+INSERT INTO users_have_roles values(2,2);
+INSERT INTO users_have_roles values(3,2);

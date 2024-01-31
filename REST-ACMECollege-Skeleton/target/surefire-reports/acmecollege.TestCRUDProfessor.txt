@@ -1,0 +1,50 @@
+-------------------------------------------------------------------------------
+Test set: acmecollege.TestCRUDProfessor
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 6, Errors: 1, Skipped: 0, Time elapsed: 0.119 s <<< FAILURE! - in acmecollege.TestCRUDProfessor
+acmecollege.TestCRUDProfessor.test01_get_all_professor_with_adminrole  Time elapsed: 0.017 s  <<< ERROR!
+org.glassfish.jersey.message.internal.MessageBodyProviderNotFoundException: MessageBodyReader not found for media type=text/html, type=interface java.util.List, genericType=java.util.List<acmecollege.entity.Professor>.
+	at acmecollege.TestCRUDProfessor.test01_get_all_professor_with_adminrole(TestCRUDProfessor.java:100)
+
+acmecollege.TestCRUDProfessor.test02_get_all_professor_with_userrole  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: is <403>
+     but: was <404>
+	at acmecollege.TestCRUDProfessor.test02_get_all_professor_with_userrole(TestCRUDProfessor.java:119)
+
+acmecollege.TestCRUDProfessor.test03_get_professor_by_id_with_adminrole  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: is <200>
+     but: was <404>
+	at acmecollege.TestCRUDProfessor.test03_get_professor_by_id_with_adminrole(TestCRUDProfessor.java:137)
+
+acmecollege.TestCRUDProfessor.test04_get_professor_by_id_with_userrole  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: is <403>
+     but: was <404>
+	at acmecollege.TestCRUDProfessor.test04_get_professor_by_id_with_userrole(TestCRUDProfessor.java:157)
+
+acmecollege.TestCRUDProfessor.test05_add_professor_with_adminrole  Time elapsed: 0.025 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: is <200>
+     but: was <404>
+	at acmecollege.TestCRUDProfessor.test05_add_professor_with_adminrole(TestCRUDProfessor.java:175)
+
+acmecollege.TestCRUDProfessor.test06_add_professor_with_userrole  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: is <403>
+     but: was <404>
+	at acmecollege.TestCRUDProfessor.test06_add_professor_with_userrole(TestCRUDProfessor.java:193)
+
+acmecollege.TestCRUDProfessor.test07_delete_professor_by_id_with_adminrole  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: is <200>
+     but: was <403>
+	at acmecollege.TestCRUDProfessor.test07_delete_professor_by_id_with_adminrole(TestCRUDProfessor.java:211)
+

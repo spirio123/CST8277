@@ -1,0 +1,72 @@
+<project
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+    http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>CST8277</groupId>
+  <artifactId>Example-HibernateSE</artifactId>
+  <version>1</version>
+  <name>Example-HibernateSE</name>
+  <description>Simple Example of Hibernate in Java SE</description>
+
+  <properties>
+      <!-- maven properties -->
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
+	  <maven.compiler.release>17</maven.compiler.release>
+	  <maven.compiler.target>17</maven.compiler.target>
+
+      <!-- code properties -->
+      <logback.version>1.2.9</logback.version>
+      <slf4j.version>1.7.32</slf4j.version>
+	  <connectorj.version>8.0.31</connectorj.version>
+	  <hibernate.version>5.6.3.Final</hibernate.version>
+  </properties>
+  
+  <dependencies>
+      <!-- logging dependencies  -->
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>${slf4j.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-classic</artifactId>
+        <version>${logback.version}</version>
+      </dependency>
+    
+      <!-- MySql ConnectorJ JDBC driver dependency -->  
+      <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>${connectorj.version}</version>
+	    </dependency>
+	
+      <!-- Hiberate dependency -->
+      <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-entitymanager</artifactId>
+        <!-- Note: hibernate-entitymanager brings in javax.persistence:javax.persistence-api dependency -->
+        <version>${hibernate.version}</version>
+      </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>${maven.compiler.plugin.version}</version>
+            <configuration>
+                <release>${maven.compiler.release}</release>
+                <target>${maven.compiler.target}</target>
+                <encoding>${project.build.sourceEncoding}</encoding>
+            </configuration>
+        </plugin>
+    </plugins>
+  </build>
+
+</project>

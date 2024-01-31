@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE resources PUBLIC "-//Payara.fish//DTD Payara Server 4 Resource Definitions//EN" "https://raw.githubusercontent.com/payara/Payara-Enterprise-Documentation/master/docs/modules/ROOT/pages/schemas/payara-resources_1_6.dtd">
+<resources>
+  <custom-resource
+    res-type="java.util.Properties"
+    jndi-name="jndi/example-properties" 
+    factory-class="org.glassfish.resources.custom.factory.PropertiesFactory"
+    >
+    <property name="property1" value="foo" />
+    <property name="property2" value="bar" />
+  </custom-resource>
+</resources>
